@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import sys, os, json, yaml
-import pdfkit, re
 from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 from canvasapi import Canvas
 
