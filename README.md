@@ -24,5 +24,5 @@ python scrape.py --config your_config.yml --download path-to-downloads-dir
 
 ## Dependencies
 ```
-pip install canvasapi
+pip install -r requirements.txt
 ```

@@ -14,6 +14,11 @@ def check_course_visibility(course, term, update=False):
         return 0
     if course.workflow_state != 'available':
         return 0
+
+    problem_tabs = [t for t in course.get_tabs() if t.id == 'syllabus' and hasattr(t, 'hidden') and t.hidden == True]
+    if len(problem_tabs) > 0:
+        print("***", course.name, "has syllabus page hidden")
+
     if course.public_syllabus_to_auth or course.public_syllabus:
         return 0
     print("-->", course.name, course.workflow_state, course.enrollment_term_id)
@@ -37,7 +42,7 @@ def check_for_inaccessible_syllabi(OPT):
 
     if not OPT['update']:
         print("There are", total, "courses that are not accessible")
-    else
+    else:
         print("There were", total, "courses that were updated")
 
 
