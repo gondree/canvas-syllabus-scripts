@@ -68,7 +68,7 @@ if __name__ == '__main__':
 
     # check path exists, if download was selected
     if not OPT['download'].endswith('/'):
-        OPT['download'] = OPT['output'] + '/'
+        OPT['download'] = OPT['download'] + '/'
     if not os.path.isdir(OPT['download']):
         os.mkdir(OPT['download'])
 
