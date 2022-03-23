@@ -57,6 +57,8 @@ if __name__ == '__main__':
     parser.add_argument("--update", type=bool, 
         dest='update', default=False, required=False,
         help="To update settings")
+    parser.add_argument("--verbose", type=bool,
+        dest='verbose', default=False, required=False)
     OPT = vars(parser.parse_args())
 
     # get options from the yml config file
