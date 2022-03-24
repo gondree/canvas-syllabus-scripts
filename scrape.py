@@ -60,7 +60,7 @@ def scrape_course_syllabus(course, term, path, verbose=False):
                 file_name = re.search(r'filename="(.*)"', header).group(1)
                 open(path+name+'-attachment-gdoc-'+file_name, 'wb').write(r.content)
             except KeyError:
-                print(">>> could not download", file_url)
+                print(">>> could not download", pdf_url)
             except Exception as e:
                 print(">>> could not download", pdf_url, ">>>", repr(e))
 
