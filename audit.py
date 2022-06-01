@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import sys, os, json, yaml
+import sys, os, yaml
 import argparse
 from canvasapi import Canvas
 
