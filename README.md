@@ -6,7 +6,7 @@ Scripts using the Canvas API to grab syllabus data.
 I recommend creating a conda environment for all the dependencies
 
 ```
-$ conda create --name canvas-api
+$ conda create --name canvas-api python=3.6.2
 $ conda activate canvas-api
 (canvas-api) $ pip install -r requirements.txt
 ```
